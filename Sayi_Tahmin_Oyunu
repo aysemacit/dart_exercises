@@ -1,0 +1,26 @@
+import 'dart:io';
+import 'dart:math';
+void main() {
+  var random = Random();
+  var sayi = random.nextInt(100) +1;
+  var sayac = 0;
+  
+  stdout.writeln('1 ile 100 arasında bir sayı tahmin edin.');
+  
+  while (true) {
+    stdout.write('Tahmininiz: ');
+    var tahmin = int.parse(stdin.readLineSync()!);
+      
+    sayac++;
+    
+    if (tahmin < sayi) {
+      stdout.writeln('Daha büyük bir sayı girin.');
+    } else if (tahmin > sayi) {
+      stdout.writeln('Daha küçük bir sayı girin.');
+    } else {
+      stdout.writeln('Tebrikler! $sayac. denemede doğru tahmini yaptınız!');
+    }
+  }
+}
+
+
