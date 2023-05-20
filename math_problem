@@ -1,0 +1,17 @@
+import 'dart:io';
+
+void main() {
+
+  // sigma x=1 n(kullanıcıdan alınacak) (x^2 / 2) probleminin çözümü nedir? 
+  //(Kullanıcı 3 girdiyse. 1/2 + 4/2 + 9/2 = ?)
+
+  stdout.write('Lütfen bir sayı girin:');
+  int n = int.parse(stdin.readLineSync()!);
+
+  double toplam = 0;
+  for (int x = 1; x <= n; x++) {
+    toplam += (x * x) / 2;
+  }
+
+  print('Sonuç = $toplam');
+}
